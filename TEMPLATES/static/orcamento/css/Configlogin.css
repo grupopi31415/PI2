@@ -1,0 +1,146 @@
+/* geral */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: helvetica, sans-serif;
+  color: #323232;
+  border: none;
+}
+
+input, label {
+    display: block;
+    width: 100%;
+}
+
+input:focus, label:focus {
+    outline: none;
+}
+
+a {
+  color: #010608;
+  margin-bottom: 15px;
+}
+
+body {
+    padding-top: 15vh; /* view height -> 15% da tela*/
+    background-color: #e6e6e6;
+    background-size: cover;
+    background-position-y: -150px;
+}
+
+/* form */
+#main-container {
+    width: 500px;
+    height: 35vh;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 25px;
+    align-items: center;
+    justify-content: center;
+}
+
+#main-container h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 1.3rem; /* adaptada ao elemento root */
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.full-box {
+    flex: 1 1 100%;
+    position: relative;
+}
+
+.half-box {
+    flex: 1 1 45%;
+    position: relative;
+}
+
+.spacing {
+  margin-right: 3%;
+}
+
+label {
+    font-weight: bold;
+    font-size: .8rem;
+}
+
+input {
+    border-bottom: 2px solid #323232;
+    padding: 4px;
+    font-size: 0.8rem;
+    margin-bottom: 8px;
+    width: 300px;
+    height: 19px;
+}
+
+input:focus {
+    border-color: #0096e7;
+}
+
+input[type="submit"] {
+    padding: 15px 30px;
+    font-size: 24px;
+    background-color: #0096e6;
+    color: #fff;
+    border-color: #FF1A1A;
+    border: 3px solid;
+    border-radius: 20px;
+    height: 40px;
+    cursor: pointer;
+    transition: ease-in-out .025s;
+    outline: 0;
+}
+
+input[type="submit"]:hover {
+     background: #2e627d
+ }
+
+#agreement {
+    margin-right: 5px;
+}
+
+#agreement, #agreement-label {
+    display: inline-block;
+    width: auto;
+}
+
+/* validações */
+.error-validation {
+    color: #FF1A1A;
+    position: absolute;
+    top: 57px;
+    font-size: .8rem;
+}
+
+.template {
+    display: none;
+}
+
+div.container {
+    margin-top: -80px;
+    margin-left: 436px;
+    padding-top: 10px;
+    padding-bottom: 70px;
+}
+
+#btn-submit {
+    width: 135%;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: larger;
+    text-align: center;
+    border-color: #323232;
+}

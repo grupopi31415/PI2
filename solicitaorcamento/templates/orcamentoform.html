@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'orcamento/css/Config.css' %}">
+
+</head>
+<body>
+    <nav style="background-color: #444;" class="navbar navbar-expand-lg navbar-dark">
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="">
+                       <div class="idiomaf"><a href="{% url 'formularioen' %}"><img src="{% static 'autenticacao/img/eua32.png' %}" alt="Português" class="img-fluid" /></a></div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+     <div id="header">
+        <div class="container">
+          <nav
+            class="navbar navbar-expand-lg navbar-light justify-content-between">
+              <img src="{% static 'autenticacao/img/logo.png' %}" class="img-fluid"/>
+          </nav>
+        </div>
+     </div>
+    <div id="main-container">
+        <h1><u><b>FAÇA SEU ORÇAMENTO</b></u></h1>
+        <div align="right"> <a href="{% url 'sair' %}">Sair</a></div>
+        <br>
+        <br>
+        <form name="orcamentoform" id="orcamentoform" action="/create/" method="POST">{% csrf_token %}
+
+            <div class="half-box spacing">
+                <label>Nome: {{ formulario.nome }}</label>
+            </div>
+
+            <div class="half-box spacing">
+                <label>E-mail: {{ formulario.email }}</label>
+            </div>
+
+                <label>Destino: {{ formulario.destino }}</label>
+
+            <div class="half-box spacing">
+                <label>Inicio {{formulario.dt_ida}}</label>
+            </div>
+
+            <div class="half-box spacing">
+                <label>Término {{formulario.dt_volta}}</label>
+            </div>
+            <br><br><br><br>
+
+            <div class="half-box spacing">
+                <label >Finalidade {{formulario.finalidade}}</label>
+            </div>
+            <br><br><br>
+
+            <div class="half-box spacing">
+                <label >Passagens {{formulario.tipo_passagem}} </label>
+            </div>
+
+            <div class="half-box spacing">
+                <label>Classificação do hotel {{formulario.classificacao_hotel}}</label>
+            </div>
+            <br><br><br>
+
+            <div class="half-box spacing">
+                <label>Tipo de pensão {{formulario.tipo_pensao}}</label>
+            </div>
+
+            <div class="half-box spacing">
+                <label>Observações {{formulario.observacoes}}</label>
+            </div>
+
+            <div class="half-box spacing">
+                <label >Orçamento {{formulario.orcamento}}</label>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+
+            <h3><u><b>VIAJANTES (Quantidade por faixa etária)</b></u></h3>
+            <br>
+            <br>
+            <br>
+
+
+            <div class="half-box spacing" align="center">
+                <label > Crianças de (0 a 6 anos) {{formulario.qtde_0_6}}</label>
+            </div>
+
+            <div class="half-box spacing" align="center">
+                <label > Crianças de (7 a 12 anos) {{formulario.qtde_7_12}}</label>
+            </div>
+            <br><br>
+            <div class="half-box spacing" align="center">
+                <label > Adultos de (13 a 60 anos) {{formulario.qtde_adultos}}</label>
+            </div>
+
+            <div class="half-box spacing" align="center">
+                <label> Melhor idade (60+) {{formulario.qtde_melhor_idade}}</label>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+             <h1><b>OPCIONAIS</b></h1>
+
+                        <div class="full-box spacing">
+                            <label> Transfer {{formulario.transfer}}</label>
+                        </div>
+
+                        <div class="full-box spacing">
+                            <label > Seguro viagem {{formulario.seguro_viagem}}</label>
+                        </div>
+
+
+                        <div class="full-box spacing" >
+                            <label> Passeios {{formulario.passeios}}</label>
+                        </div>
+
+                        <div class="full-box spacing" >
+                            <label> Ingressos {{formulario.ingressos}}</label>
+                        </div>
+
+                 <br>
+                 <br>
+
+                <div type="btn-submit">
+                    <input type="submit" id="btn-submit" value="SALVAR">
+                </div>
+
+        </form>
+    </div>
+
+</body>
+</html>

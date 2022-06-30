@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'autenticacao/css/Configorc.css' %}">
+
+</head>
+<body>
+    <nav style="background-color: #444;" class="navbar navbar-expand-lg navbar-dark">
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="">
+                        <div class="idioma"><a href="{% url '' %}"><img src="{% static 'autenticacao/img/eua32.png' %}" alt="English" class="img-fluid" /></a></div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+     <div id="header">
+        <div class="container">
+          <nav
+            class="navbar navbar-expand-lg navbar-light justify-content-between">
+            <img src="{% static "autenticacao/img/logo.png" %}" class="img-fluid" />
+          <nav>
+        </div>
+     </div> 
+     <div id="main-container">
+        <h1><u>FAÇA SEU ORÇAMENTO</h1></u>
+        <form id="register-form">
+        <div class="half-box spacing">
+            <label for="inicio">Inicio</label>
+            <input type="text" name="inicio" id="inicio" placeholder="Saída" required>
+        </div>  
+        <div class="half-box spacing">
+            <label for="termino">Término</label>
+            <input type="text" name="termino" id="termino" placeholder="Destino" required>
+        </div>
+        <div class="half-box spacing">
+            <label for="tipo de viagem">Tipo de viagem:</label><select>
+                <option></option>
+                <option>Lazer</option>
+                <option>Negócios</option>
+                <option>Estudos</option>
+                <option>Outros (discriminar)</option>            
+            </select>
+            <input type="text" name="tipo de viagem" id="tipo de viagem" placeholder="Outros discriminar" required>
+        </div>    
+        <div class="half-box spacing">
+            <label for="passagens">Passagens:</label><select> 
+                <option></option>
+                <option>Aérea</option>
+                <option>Terrestre</option>
+                <option>Marítima</option>            
+            </select>
+            <input type="text" name="Observações" id="obervações" placeholder="Observações e recomendações">
+        </div>
+        <div class="half-box spacing">
+            <label for="classificação do hotel">Classificação do hotel</label>
+            <input type="text" name="classificação do hotel" id="classificação do hotel" placeholder="(estrelas)" required>
+        </div>    
+        <div class="half-box spacing">
+            <label for="tipo de pensão">Tipo de pensão:</label><select>
+                <option></option>
+                <option>Café da manhã</option> 
+                <option>Meia Pensão</option>
+                <option>Pensão Completa</option>
+                <option>All Inclusive</option>            
+            </select>
+            <input type="text" name="Observações" id="obs" placeholder="Observações e sugestões">
+        </div>
+        <div class="half-box spacing">
+            <label for="obervações">Observações:</label>
+            <input type="text" name="obervações" id="obervações" placeholder="">
+        </div>    
+        <div class="half-box spacing">
+            <label for="orçamento">Orçamento:</label>
+            <input type="text" name="orçamento" id="orçamento" placeholder="">
+        </div>
+        </form>
+        <div id="container-a">
+        <h2><u>VIAJANTES</h2></u>
+        <p><b><u>Quantidade por faixa etária</p></b></u>    
+            <form id="register-form">
+        <div class="half-box spacing">
+            <label for="quantidade"> Crianças de (0 a 6 anos)</label>
+            <input type="text" name="quantidade" id="quantidade" placeholder="" required>
+        </div>
+        <div class="half-box spacing">
+            <label for="quantidade"> Crianças de (7 a 12 anos)</label>
+            <input type="text" name="quantidade" id="quantidade" placeholder="" required>
+        </div>        
+        <div class="half-box spacing">
+            <label for="quantidade"> Adultos de (13 a 60 anos)</label>
+            <input type="text" name="quantidade" id="quantidade" placeholder="" required>
+        </div>        
+        <div class="half-box spacing">
+            <label for="quantidade"> Melhor idade (60+)</label>
+            <input type="text" name="quantidade" id="quantidade" placeholder="" required>
+        </div>
+        </form>
+        </div>
+        <div id="container-b">
+            <h3><u>OPCIONAIS</h3></u>
+                <form id="register-form">
+            <div class="full-box spacing">
+                <label for="transfer"> Transfer</label>
+                <input type="text" name="transfer" id="transfer" placeholder="">
+            </div>
+            <div class="full-box spacing">
+                <label for="seguro viagem"> Seguro viagem</label>
+                <input type="text" name="seguro viagem" id="seguro viagem" placeholder="">
+            </div>
+            <div class="full-box spacing">
+                <label for="passeios"> Passeios</label>
+                <input type="text" name="passeios" id="passeios" placeholder="">
+            </div>
+            <div class="full-box spacing">
+                <label for="ingressos"> Ingressos</label>
+                <input type="text" name="ingressos" id="ingressos" placeholder="">
+            </div>
+                </form>
+           </div>
+        <div type="btn-submit">
+            <input type="submit" id="btn-submit" value="EDITAR">
+            <input type="submit" id="btn-submit" value="SALVAR">
+          </div>
+         </div>
+        </form>
+    </div>  
+   <script src="js/scripts.js"></script>      
+</body>
+</html>
